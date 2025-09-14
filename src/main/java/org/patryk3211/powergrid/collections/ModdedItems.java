@@ -68,6 +68,12 @@ public class ModdedItems {
             .tag(ModdedTags.Item.WIRES.tag, ModdedTags.Item.LIGHT_WIRES.tag)
             .register();
 
+    public static final ItemEntry<WireItem> DECO_WIRE = REGISTRATE.item("decorative_wire", WireItem::new)
+            .transform(WireProperties.setAll(120f, 80, 8f, 0.288f))
+            .transform(WireProperties.setRenderingParams(PowerGrid.texture("special/decorative_wire"), 1.02f, 1.05f, 0.0750f))
+            .tag(ModdedTags.Item.WIRES.tag, ModdedTags.Item.LIGHT_WIRES.tag)
+            .register();
+
     public static final ItemEntry<Item> WIRE_CUTTER = REGISTRATE.item("wire_cutter", Item::new)
             .register();
 
